@@ -17,6 +17,11 @@ logging.basicConfig(
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 
+if TOKEN:
+    print("TOKEN FOUND")
+else:
+    print("TOKEN MISSING")
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "👋 Hello! I'm Elite Bot.\n\n"
